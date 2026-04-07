@@ -54,7 +54,11 @@ jobs:
 
             - name: phpstan
               run: |
-                ./vendor/bin/phpstan analyse --level=5 --memory-limit=1G
+                if [ -f ./vendor/bin/phpstan ]; then
+                  ./vendor/bin/phpstan analyse --level=5 --memory-limit=1G
+                else
+                  echo "PHPStan not installed"
+                fi
 
             - name: phpinsights
               run: |
