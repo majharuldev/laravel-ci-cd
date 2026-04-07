@@ -83,7 +83,7 @@ jobs:
                username: ${{ secrets.SSH_USER }}
                password: ${{ secrets.SSH_PASS }}
                script: |
-               cd /var/www/htm/laravel-cicd && ./main_deploy.sh main       
+                cd /var/www/htm/laravel-cicd && ./main_deploy.sh main       
 
                - name: Deployment to Dev Server
                if: github.ref == 'refs/heads/dev'
@@ -93,4 +93,4 @@ jobs:
                 username: ${{ secrets.SSH_USER }}
                 password: ${{ secrets.SSH_PASS }}
                 script: |
-                cd /var/www/htm/laravel-cicd && ./main_deploy.sh dev
+                 cd /var/www/htm/laravel-cicd && ./main_deploy.sh dev
