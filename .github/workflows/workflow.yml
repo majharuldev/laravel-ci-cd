@@ -69,7 +69,7 @@ jobs:
 
             - name: Show DB config
               run: |
-                grep DB_ .env
+                grep DB_ .env ||true
 
             - name: Run tests
               run: |
